@@ -1,0 +1,82 @@
+@import 'angle';
+@import 'base';
+@import 'gradient';
+
+.flex{
+
+    min-height: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.flex > div {
+  display: flex; 
+  flex-basis: calc(50% - 100px);  
+  justify-content: center;
+  flex-direction: column;
+    
+    font-size: 200%;
+    color:#FFF;
+    text-align: center;
+    vertical-align: middle
+        
+}
+.flex > div > div {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.box { margin: 50px; }
+.box:nth-child(1),.box:nth-child(3){ margin-right: 0; }
+.box:nth-child(3),.box:nth-child(4){ margin-top:  0; }
+
+.bdr-otr{
+    @include border-radius(3em);
+    background-color: $skyblue;
+    box-sizing: border-box;
+    padding:5px 20px;
+    margin: 0 auto;
+    @include box-shadow(12px 20px 52px -26px rgba(0,0,0,1));
+}
+.bdr-inr{
+    @include border-radius(2em);
+    border:#FFF solid 1em;
+    margin: 20px auto;
+    
+    background: rgba(91,206,255,1);
+background: -moz-linear-gradient(top, rgba(91,206,255,1) 0%, rgba(87,222,240,1) 97%, rgba(87,222,240,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(91,206,255,1)), color-stop(97%, rgba(87,222,240,1)), color-stop(100%, rgba(87,222,240,1)));
+background: -webkit-linear-gradient(top, rgba(91,206,255,1) 0%, rgba(87,222,240,1) 97%, rgba(87,222,240,1) 100%);
+background: -o-linear-gradient(top, rgba(91,206,255,1) 0%, rgba(87,222,240,1) 97%, rgba(87,222,240,1) 100%);
+background: -ms-linear-gradient(top, rgba(91,206,255,1) 0%, rgba(87,222,240,1) 97%, rgba(87,222,240,1) 100%);
+background: linear-gradient(to bottom, rgba(91,206,255,1) 0%, rgba(87,222,240,1) 97%, rgba(87,222,240,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5bceff', endColorstr='#57def0', GradientType=0 );
+    
+   
+}
+.wrap-inner{ z-index: 2; width:100%; height: auto; margin: 0 auto; background-image: url(https://dummyimage.com/600x400/bdf4ff/bdf4ff.jpg); background-position: 50% 50%; background-repeat: no-repeat; }
+.ptb-1{ padding-top:1em; padding-bottom:1em }
+.text-shadow{ text-shadow: 0 0 1px #111, 0 0 1px #111; }
+.bg-no-color{ background: transparent }
+.bx-shad-inst{
+    height: 300px;
+    line-height: 300px;
+    background-color: #FFF;
+    @include border-radius(5px);
+     @include box-shadow(inset 0px 0px 20px -2px rgba(0,0,0,0.5));
+    font-size: 500%;
+    color:$skyblue;
+    text-align: center;
+    vertical-align: middle
+    
+}
+.mtb-1{ margin:1em auto }
+.bx-sh{ @include box-shadow(inset 0px 0px 20px -2px rgba(0,0,0,0.5));}
+
